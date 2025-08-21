@@ -98,6 +98,22 @@ proxy-groups:
       - 手动切换
       - CF节点
       - DIRECT
+  - name: Pixiv
+    icon: https://play-lh.googleusercontent.com/8pFuLOHF62ADcN0ISUAyEueA5G8IF49mX_6Az6pQNtokNVHxIVbS1L2NM62H-k02rLM=w240-h480-rw
+    type: select
+    proxies:
+      - 节点选择
+      - 自动选择
+      - 奈飞节点
+      - 狮城节点
+      - 香港节点
+      - 台湾节点
+      - 日本节点
+      - 美国节点
+      - 韩国节点
+      - 手动切换
+      - CF节点
+      - DIRECT
   - name: 巴哈姆特
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bahamut.png
     type: select
@@ -332,6 +348,7 @@ proxy-groups:
       - OpenAi
       - 油管视频
       - 奈飞视频
+      - Pixiv
       - 巴哈姆特
       - 哔哩哔哩
       - 国外媒体
@@ -381,6 +398,13 @@ rule-providers:
   BanProgramAD:
     url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/BanProgramAD.list
     path: ./ruleset/BanProgramAD.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  BanEasyListChina:
+    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/BanEasyListChina.list
+    path: ./ruleset/BanEasyListChina.list
     behavior: classical
     interval: 86400
     format: text
@@ -511,6 +535,13 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+  Pixiv:
+    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/Pixiv.list
+    path: ./ruleset/Pixiv.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
   Bahamut:
     url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/Bahamut.list
     path: ./ruleset/Bahamut.list
@@ -579,6 +610,7 @@ rules:
   - "RULE-SET,LocalAreaNetwork,全球直连"
   - "RULE-SET,UnBan,全球直连"
   - "RULE-SET,BanAD,广告拦截"
+  - "RULE-SET,BanEasyListChina,广告拦截"
   - "RULE-SET,BanProgramAD,应用净化"
   - "RULE-SET,GoogleFCM,谷歌FCM"
   - "RULE-SET,GoogleCN,全球直连"
@@ -598,6 +630,7 @@ rules:
   - "RULE-SET,Nintendo,游戏平台"
   - "RULE-SET,YouTube,油管视频"
   - "RULE-SET,Netflix,奈飞视频"
+  - "RULE-SET,Pixiv,Pixiv"
   - "RULE-SET,Bahamut,巴哈姆特"
   - "RULE-SET,BilibiliHMT,哔哩哔哩"
   - "RULE-SET,Bilibili,哔哩哔哩"
