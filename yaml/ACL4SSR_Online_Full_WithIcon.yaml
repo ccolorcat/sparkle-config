@@ -66,6 +66,7 @@ proxy-groups:
       - 美国节点
       - 韩国节点
       - 手动切换
+      - CF节点
       - DIRECT
   - name: 油管视频
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png
