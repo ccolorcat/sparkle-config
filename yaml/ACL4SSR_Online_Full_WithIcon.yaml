@@ -50,6 +50,20 @@ proxy-groups:
       - 韩国节点
       - 手动切换
       - DIRECT
+  - name: Spotify
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Spotify.png
+    type: select
+    proxies:
+      - 节点选择
+      - 自动选择
+      - 狮城节点
+      - 香港节点
+      - 台湾节点
+      - 日本节点
+      - 美国节点
+      - 韩国节点
+      - 手动切换
+      - DIRECT
   - name: 油管视频
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png
     type: select
@@ -412,6 +426,13 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+  Spotify:
+    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/Spotify.list
+    path: ./ruleset/Spotify.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
   NetEaseMusic:
     url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/NetEaseMusic.list
     path: ./ruleset/NetEaseMusic.list
@@ -546,6 +567,7 @@ rules:
   - "RULE-SET,Apple,苹果服务"
   - "RULE-SET,Telegram,电报消息"
   - "RULE-SET,OpenAi,OpenAi"
+  - "RULE-SET,Spotify,Spotify"
   - "RULE-SET,NetEaseMusic,网易音乐"
   - "RULE-SET,Epic,游戏平台"
   - "RULE-SET,Origin,游戏平台"
